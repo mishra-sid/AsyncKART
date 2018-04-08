@@ -1,10 +1,10 @@
-#AsyncKART : LEARNING TO PLAY MARIO KART WITH DEEP REINFORCEMENT LEARNING USING ASYNCHRONOUS ACTOR CRITIC METHOD 
+# AsyncKART : LEARNING TO PLAY MARIO KART WITH DEEP REINFORCEMENT LEARNING USING ASYNCHRONOUS ACTOR CRITIC METHOD 
 
-OBJECTIVE
+## OBJECTIVE
 
 The goal of the project is to train Mario Kart ( A racing game )'s character to be able to maintain itself along a track from just the visual feedback that we see during playing the game and use game's inbuilt reward parameters to train a model using RL with Asynchronous actor critic method to stabilize each other(agents) . 
 
-PROPOSED METHODOLOGY
+## PROPOSED METHODOLOGY
 
 The following is our step-by-step plan:
 
@@ -20,7 +20,7 @@ The following is our step-by-step plan:
 
 * Test the trained model by letting it race on a new track in which it hadnât been trained before and evaluate its performance. 
 
-CONTRIBUTION
+## CONTRIBUTION
 
 * This training of model being asynchronous uses comparatively far less resources and hence can be used in training self driving cars online effectively.
 
@@ -32,21 +32,21 @@ CONTRIBUTION
 
 * It can also act as an reinforcement layer in already existing imitation based methods to get the best of both worlds and hopefully get a optimal performance.  
 
-DATASET 
+## DATASET 
 
 The processed visual feedback extracted acts like a dataset for training the required  model.
 
-EXPERIMENTS AND PERFORMANCE METRICS TO BE EVALUATED
+## EXPERIMENTS AND PERFORMANCE METRICS TO BE EVALUATED
 
-* **Resource computation** : Comparison of resource required by a general RL method and A3C. 
+#### Resource computation : Comparison of resource required by a general RL method and A3C. 
 
-**Expected results   **
+#### Expected results 
 
 General RL method would need GPU clusters to be able to train in a feasible amount of time whereas A3C would hardly need a normal multicore CPU to do the same in half the time as mentioned in [[1] ](#bookmark=id.7ldpn4gg9uty).
 
-* **Comparison with imitation based methods: ** Comparison with the published metrics by imitation based methods in [[2] . ](#bookmark=id.dtj1kpq7kj31) 
+* Comparison with imitation based methods: Comparison with the published metrics by imitation based methods in [[2] . ](#bookmark=id.dtj1kpq7kj31) 
 
-**Expected results : **
+* Expected results : 
 
 Imitation based methods given large data should have higher accuracy, but it will be bounded by expertâs way of playing and will not generalize well.
 
