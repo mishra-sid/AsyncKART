@@ -15,11 +15,11 @@ The following is our step-by-step plan:
 
 * Implement Reinforcement learning using Asynchronous actor critic (A3C agents) using Tensorflow.
 
-* Process the visual feedback received from the gameâs display to get location information of racer and surroundings.
+* Process the visual feedback received from the game's display to get location information of racer and surroundings.
 
 * Provide an interface with a python script to train this model from the processed visual feedback using the learning model designed at 3rd step. 
 
-* Test the trained model by letting it race on a new track in which it hadnât been trained before and evaluate its performance. 
+* Test the trained model by letting it race on a new track in which it hadn't been trained before and evaluate its performance. 
 
 ## CONTRIBUTION
 
@@ -27,7 +27,7 @@ The following is our step-by-step plan:
 
 * The existing approaches have been using Imitation learning methods like offline search, DAGGER etc. 
 
-    * They are effective provided large data but they are upper bounded by expertâs ability.
+    * They are effective provided large data but they are upper bounded by expert's ability.
 
     * Also experts rarely makes an error, so the error recovery probability is low, in contrast RL learns from its mistakes and trains to get a better reward each time, so it has richer practical applications in real time risk sensitive self driving scenarios.
 
