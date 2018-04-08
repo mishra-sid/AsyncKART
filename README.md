@@ -48,7 +48,7 @@ General RL method would need GPU clusters to be able to train in a feasible amou
 
 * Expected results : 
 
-Imitation based methods given large data should have higher accuracy, but it will be bounded by expertâs way of playing and will not generalize well.
+Imitation based methods given large data should have higher accuracy, but it will be bounded by expert's way of playing and will not generalize well.
 
 The error recovery from dead ends should be better in case of RL A3C method. 
 
