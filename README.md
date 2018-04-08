@@ -1,8 +1,8 @@
-AsyncKART : LEARNING TO PLAY MARIO KART WITH DEEP REINFORCEMENT LEARNING USING ASYNCHRONOUS ACTOR CRITIC METHOD 
+#AsyncKART : LEARNING TO PLAY MARIO KART WITH DEEP REINFORCEMENT LEARNING USING ASYNCHRONOUS ACTOR CRITIC METHOD 
 
 OBJECTIVE
 
-The goal of the project is to train Mario Kart ( A racing game ) âs character to be able to maintain itself along a track from just the visual feedback that we see during playing the game and use gameâs inbuilt reward parameters to train a model using RL with Asynchronous actor critic method to stabilize each other(agents) . 
+The goal of the project is to train Mario Kart ( A racing game )'s character to be able to maintain itself along a track from just the visual feedback that we see during playing the game and use game's inbuilt reward parameters to train a model using RL with Asynchronous actor critic method to stabilize each other(agents) . 
 
 PROPOSED METHODOLOGY
 
@@ -50,7 +50,7 @@ General RL method would need GPU clusters to be able to train in a feasible amou
 
 Imitation based methods given large data should have higher accuracy, but it will be bounded by expertâs way of playing and will not generalize well.
 
-	The error recovery from dead ends should be better in case of RL A3C method. 
+The error recovery from dead ends should be better in case of RL A3C method. 
 
 REFERENCES:
 
