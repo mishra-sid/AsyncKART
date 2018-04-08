@@ -44,7 +44,9 @@ The processed visual feedback extracted acts like a dataset for training the req
 
 General RL method would need GPU clusters to be able to train in a feasible amount of time whereas A3C would hardly need a normal multicore CPU to do the same in half the time as mentioned in [[1] ](#bookmark=id.7ldpn4gg9uty).
 
-* Comparison with imitation based methods: Comparison with the published metrics by imitation based methods in [[2] . ](#bookmark=id.dtj1kpq7kj31) 
+* Comparison with imitation based methods: 
+
+Comparison with the published metrics by imitation based methods in [[2] . ](#bookmark=id.dtj1kpq7kj31) 
 
 * Expected results : 
 
