@@ -55,7 +55,7 @@ Imitation based methods given large data should have higher accuracy, but it wil
 
 The error recovery from dead ends should be better in case of RL A3C method. 
 
-REFERENCES:
+#### REFERENCES:
 
 [1] [https://arxiv.org/abs/1602.01783](https://arxiv.org/abs/1602.01783) ( Paper for comparison of A3C against other methods for  performing RL )
 
