@@ -11,4 +11,5 @@ sudo apt-get install python-pip
 sudo apt-get install xvfb xserver-xephyr vnc4server
 sudo pip install pyvirtualdisplay
 sudo dpkg -i virtualgl_2.2.2_amd64.deb 
+cp ROM/marioKart.n64 gym-mupen64plus/gym-mupen64plus/ROMs/marioKart.n64
 
