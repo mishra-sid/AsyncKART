@@ -1,0 +1,3 @@
+[submodule "gym-mupen64plus"]
+	path = gym-mupen64plus
+	url = https://github.com/bzier/gym-mupen64plus
