@@ -8,13 +8,13 @@ def run_maze():
     step = 0
     for episode in range(300):
         # initial observation
-        observation = env.reset()
+        observation = env.reset().ravel()[::2000]
 
         while True:
             # fresh env
             env.render()
-	    observation=observation.ravel()[:100]
-	    print observation
+	    
+	    print observation.shape
 
             # RL choose action based on observation
             index = RL.choose_action(observation)
@@ -23,10 +23,11 @@ def run_maze():
             # RL take action and get next observation and reward
 
             observation_, reward, end_episode, done = env.step(action)
-	    observation_ = observation_.ravel()[:100]
+	    observation_ = observation_.ravel()[::2000]
+	    print observation[0::2000].shape
 
 	    #print observation.shape
-	    #print index
+	    print index
 	    #print reward
             #print observation_.shape
 
@@ -46,12 +47,12 @@ def run_maze():
     # end of game
     print('game over')
     env.destroy()
-
+'''
 
 if __name__ == "__main__":
     # maze game
     env = gym.make('Mario-Kart-Royal-Raceway-v0')
-    RL = DeepQNetwork(6,100,
+    RL = DeepQNetwork(6,461,
                       learning_rate=0.01,
                       reward_decay=0.9,
                       e_greedy=0.9,
@@ -63,10 +64,9 @@ if __name__ == "__main__":
     env.mainloop()
 RL.plot_cost()
 
-
-
-
 '''
+
+
 if __name__ == "__main__":
 	env = gym.make('Mario-Kart-Royal-Raceway-v0')
 
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
 	
 		#action[random.randint(0,5)]=1
-		action[2]=1
+		action[0]=100
 		print action
 		obs, reward, end_episode, info = env.step(action)
 		#print (obs.shape)
@@ -90,4 +90,3 @@ if __name__ == "__main__":
 	    
 	obs = env.reset()
 	env.close()
-'''

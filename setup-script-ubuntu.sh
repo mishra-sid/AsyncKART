@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get install tensorflow
 sudo apt-get install python-pip
 cd gym-mupen64plus/
 sudo -H pip install -e .
