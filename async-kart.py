@@ -1,7 +1,7 @@
 
 import gym
 import gym_mupen64plus
-from RL_brain import DeepQNetwork
+from Rider import DeepQNetwork
 
 
 def run_maze():
@@ -16,19 +16,19 @@ def run_maze():
 	    
 	    print observation.shape
 
-            # RL choose action based on observation
+            # Rider choose action based on observation
             index = RL.choose_action(observation)
 	    action = [0,0,0,0,0,0]
 	    action[index]=1
-            # RL take action and get next observation and reward
 
+            # RL take action and get next observation and reward
             observation_, reward, end_episode, done = env.step(action)
 	    observation_ = observation_.ravel()[::2000]
 	    print observation[0::2000].shape
 
 	    #print observation.shape
-	    print index
-	    #print reward
+	    print ("index->",index)
+	    print ("reward->",reward)
             #print observation_.shape
 
             RL.store_transition(observation,index, reward, observation_)
@@ -45,9 +45,8 @@ def run_maze():
             step += 1
 
     # end of game
-    print('game over')
+    print('END')
     env.destroy()
-'''
 
 if __name__ == "__main__":
     # maze game
@@ -61,12 +60,8 @@ if __name__ == "__main__":
                       # output_graph=True
                       )
     run_maze()
-    env.mainloop()
-RL.plot_cost()
 
 '''
-
-
 if __name__ == "__main__":
 	env = gym.make('Mario-Kart-Royal-Raceway-v0')
 
@@ -90,3 +85,4 @@ if __name__ == "__main__":
 	    
 	obs = env.reset()
 	env.close()
+'''
