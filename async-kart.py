@@ -2,7 +2,7 @@
 import gym
 import gym_mupen64plus
 from Rider import DeepQNetwork
-
+import numpy as np
 
 def run_maze():
     step = 0
@@ -17,9 +17,27 @@ def run_maze():
 	    print observation.shape
 
             # Rider choose action based on observation
-            index = RL.choose_action(observation)
-	    action = [0,0,0,0,0,0]
-	    action[index]=1
+            action = RL.choose_action(observation)
+	    action = [(int(round(item))) for sublist in action for item in sublist]	    	  
+	    print action 
+	    index = np.argmax(action)
+
+ 
+	    if action[2]>0:
+		action[2]=1
+	    else:
+		action[2]
+
+            if action[3]>0:
+                action[3]=1
+            else:
+                action[3]=0
+
+            if action[4]>0:
+                action[4]=1
+            else:
+                action[4]=0
+
 
             # RL take action and get next observation and reward
             observation_, reward, end_episode, done = env.step(action)
@@ -51,7 +69,7 @@ def run_maze():
 if __name__ == "__main__":
     # maze game
     env = gym.make('Mario-Kart-Royal-Raceway-v0')
-    RL = DeepQNetwork(6,461,
+    RL = DeepQNetwork(5,461,
                       learning_rate=0.01,
                       reward_decay=0.9,
                       e_greedy=0.9,

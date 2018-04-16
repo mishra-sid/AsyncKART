@@ -113,13 +113,16 @@ class DeepQNetwork:
     def choose_action(self, observation):
         # to have batch dimension when feed into tf placeholder
 	observation = observation[np.newaxis, :]
+	actions_values = None
+
         if np.random.uniform() < self.epsilon:
             # forward feed the observation and get q value for every actions
             actions_value = self.sess.run(self.q_eval, feed_dict={self.s: observation})
-            action = np.argmax(actions_value)
         else:
-            action = np.random.randint(0, self.n_actions)
-        return action
+	    actions_value = [[np.random.randint(0, 5) for i in range (0,self.n_actions)]]
+        
+	print actions_value
+	return actions_value
 
     def learn(self):
         # check to replace target parameters
